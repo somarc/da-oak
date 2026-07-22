@@ -417,8 +417,33 @@ main > .section.callout strong {
     color: var(--oak-signal-dark);
 }
 
+main > .section.callout > .default-content-wrapper > p {
+    color: var(--oak-signal-dark);
+}
+
 main > .section.callout a:any-link:not(.button) {
     color: #0c2b10;
+}
+
+main > .section.callout a.button.primary {
+    border-color: var(--oak-signal-dark);
+    background: var(--oak-signal-dark);
+    color: var(--oak-signal);
+}
+
+main > .section.callout a.button.secondary {
+    border-color: var(--oak-signal-dark);
+    background: transparent;
+    color: var(--oak-signal-dark);
+}
+
+main > .section.callout a.button.primary:hover,
+main > .section.callout a.button.primary:focus-visible,
+main > .section.callout a.button.secondary:hover,
+main > .section.callout a.button.secondary:focus-visible {
+    border-color: var(--oak-night);
+    background: var(--oak-night);
+    color: var(--oak-signal);
 }
 
 main > .section.page-hero {
