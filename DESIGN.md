@@ -4,7 +4,7 @@
 
 **Industry pattern:** full-bleed cinematic hero + dark technical editorial
 **EDS skill:** `eds-cinematic-hero` at `cinematic` depth
-**Media path:** reviewed Riverboat → Grok Imagine poster and atmospheric loop
+**Media path:** reviewed Riverboat → Grok Imagine poster; optional loop only when the current video tool and retention policy permit it
 **Product posture:** architecture exploration presented with demonstrated facts, explicit hypotheses, and visible proof boundaries
 
 ### One-line thesis

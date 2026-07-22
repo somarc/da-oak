@@ -75,6 +75,21 @@
     opacity: 1;
 }
 
+.video-hero.has-poster:not(.has-video) .video-hero-poster img {
+    transform: scale(1.015);
+    animation: oak-hero-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes oak-hero-drift {
+    from {
+        transform: scale(1.015) translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: scale(1.055) translate3d(-0.6%, -0.4%, 0);
+    }
+}
+
 .video-hero-content {
     position: relative;
     z-index: 3;
@@ -143,5 +158,10 @@
 @media (prefers-reduced-motion: reduce) {
     .video-hero video {
         display: none;
+    }
+
+    .video-hero.has-poster:not(.has-video) .video-hero-poster img {
+        transform: none;
+        animation: none;
     }
 }
