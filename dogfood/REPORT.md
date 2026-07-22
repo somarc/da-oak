@@ -4,6 +4,8 @@
 **Repository:** `somarc/da-oak`
 **Feature branch:** `canon`
 **Feature preview:** https://canon--da-oak--somarc.aem.page/
+**Review issue:** https://github.com/somarc/da-oak/issues/1
+**Draft PR:** https://github.com/somarc/da-oak/pull/2
 **Live publication:** not performed
 **CLI under test:** `@somarc/da-cli` reports `0.5.1`, source-tree candidate
 `f0b0078` during orientation
@@ -113,7 +115,12 @@ That is expected preview behavior, not a page-content defect.
 - `npm run lint`: pass.
 - `npm audit --omit=dev`: zero production vulnerabilities.
 - GitHub Build workflow on `canon`: pass.
+- Draft PR checks: Build pass; AEM PSI check pass.
 - Code Sync bytes verified for global tokens and every custom block.
+
+The `canon--*.aem.live` route still serves the original boilerplate title and
+content (`Home | AEM Boilerplate` / `Congrats, you are ready to go!`), directly
+confirming that the new DA canon was not promoted to live.
 
 ## Dogfood findings
 
