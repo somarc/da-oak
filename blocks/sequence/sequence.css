@@ -1,0 +1,104 @@
+.sequence .sequence-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: sequence;
+}
+
+.sequence .sequence-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3.75rem minmax(0, 1fr);
+    gap: 0 1rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--oak-line);
+    counter-increment: sequence;
+}
+
+.sequence .sequence-item:last-child {
+    border-bottom: 1px solid var(--oak-line);
+}
+
+.sequence .sequence-label {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    min-height: 2.75rem;
+    color: var(--oak-signal);
+    font-family: var(--label-font-family);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.sequence .sequence-label::after {
+    position: absolute;
+    top: 1.75rem;
+    left: 0.55rem;
+    width: 1px;
+    height: calc(100% + 1.75rem);
+    background: linear-gradient(var(--oak-signal), transparent);
+    content: '';
+}
+
+.sequence .sequence-label > * {
+    margin: 0;
+}
+
+.sequence .sequence-copy h3 {
+    margin: 0;
+    font-family: var(--heading-font-family);
+    font-size: clamp(1.65rem, 4vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+.sequence .sequence-copy p {
+    max-width: 44rem;
+    margin-top: 0.65rem;
+    color: var(--oak-text-soft);
+}
+
+.sequence .sequence-output {
+    grid-column: 2;
+    margin-top: 1rem;
+    padding: 0.75rem 0 0.75rem 1rem;
+    border-left: 2px solid var(--oak-amber);
+    color: var(--oak-text-dim);
+    font-family: var(--mono-font-family);
+    font-size: var(--body-font-size-xs);
+    line-height: 1.55;
+}
+
+.sequence .sequence-output > * {
+    margin: 0;
+}
+
+.sequence.roadmap .sequence-label {
+    color: var(--oak-amber);
+}
+
+.sequence.roadmap .sequence-label::after {
+    background: linear-gradient(var(--oak-amber), transparent);
+}
+
+.sequence .sequence-item:last-child .sequence-label::after {
+    display: none;
+}
+
+@media (width >= 900px) {
+    .sequence .sequence-item {
+        grid-template-columns: 5rem minmax(0, 1fr) minmax(12rem, 0.45fr);
+        gap: 2rem;
+        align-items: start;
+        padding: 2.25rem 0;
+    }
+
+    .sequence .sequence-output {
+        grid-column: 3;
+        margin-top: 0;
+    }
+}

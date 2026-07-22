@@ -1,20 +1,44 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+    border-top: 1px solid var(--oak-line);
+    background:
+        radial-gradient(circle at 82% 12%, rgb(168 255 120 / 7%), transparent 20rem),
+        #030b08;
+    color: var(--oak-text-soft);
+    font-size: var(--body-font-size-s);
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+    display: grid;
+    gap: 1.5rem;
+    width: min(100%, var(--content-max));
+    margin: auto;
+    padding: clamp(3rem, 8vw, 5rem) var(--page-gutter);
 }
 
 footer .footer p {
-  margin: 0;
+    max-width: 46rem;
+    margin: 0;
+}
+
+footer .footer p:first-child {
+    color: var(--oak-white);
+    font-family: var(--heading-font-family);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.08;
+}
+
+footer .footer a:any-link {
+    color: var(--oak-signal);
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+    footer .footer > div {
+        grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+        align-items: end;
+    }
+
+    footer .footer p:last-child {
+        justify-self: end;
+        text-align: right;
+    }
 }
