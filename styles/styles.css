@@ -448,6 +448,11 @@ main > .section.page-hero h1 + p {
     color: var(--oak-text-soft);
     font-size: clamp(1.05rem, 2vw, 1.3rem);
 }
+
+main > .section.page-hero p.button-wrapper {
+    display: inline-flex;
+    margin-right: 0.6rem;
+}
 /* stylelint-enable no-descending-specificity */
 
 main table {
