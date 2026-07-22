@@ -41,6 +41,19 @@
 - automatic visual acceptance
 - successful Grok video generation in the current retention configuration
 
-DA upload, preview rewrite, public route, and browser evidence are appended to
-this record only after the frozen poster completes the normal constrained
-`da-cli` delivery path.
+## DA and EDS delivery
+
+- DA binary put: committed successfully to
+  `da://somarc/da-oak/media/oak-edge-hero-poster.webp`
+- Feature code/content branch: `canon`
+- Public preview page: `https://canon--da-oak--somarc.aem.page/`
+- EDS media rewrite:
+  `media_16ba7b3340cc009cd2b12bd241b301a8e7765943c.webp`
+- Browser response: HTTP 200; rendered responsive derivative 2000×1125 on
+  desktop and 750-pixel source selected in the 375-pixel responsive harness
+- `index.plain.html`: one H1, readable static content, zero `about:error`
+  references, and no script dependency
+
+The feature preview—not the source image model transcript—is the visual
+delivery oracle. Live publication remains a separate, unexercised approval
+boundary.
