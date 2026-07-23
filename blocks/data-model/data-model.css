@@ -1,0 +1,55 @@
+.data-model .data-model-list {
+    display: grid;
+    margin: 0;
+    border-top: 1px solid var(--oak-line);
+}
+
+.data-model dt,
+.data-model dd {
+    margin: 0;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--oak-line);
+}
+
+.data-model dt {
+    color: var(--oak-white);
+    font-family: var(--label-font-family);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.data-model dd {
+    padding-top: 0;
+    color: var(--oak-text-soft);
+}
+
+.data-model dd > * {
+    max-width: 50rem;
+    margin-top: 0;
+}
+
+.data-model dd code {
+    color: var(--oak-signal);
+}
+
+@media (width >= 700px) {
+    .data-model .data-model-list {
+        grid-template-columns: minmax(10rem, 0.34fr) minmax(0, 1fr);
+    }
+
+    .data-model dt,
+    .data-model dd {
+        padding: 1.5rem 0;
+    }
+
+    .data-model dt {
+        padding-right: 2rem;
+    }
+
+    .data-model dd {
+        padding-left: 2rem;
+        border-left: 1px solid var(--oak-line);
+    }
+}

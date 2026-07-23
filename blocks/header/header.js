@@ -131,7 +131,7 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
+  const brandLink = navBrand?.querySelector('.button');
   if (brandLink) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
@@ -150,6 +150,16 @@ export default async function decorate(block) {
       });
     });
   }
+
+  const currentPath = window.location.pathname.replace(/\/index(?:\.html)?$/, '/') || '/';
+  nav.querySelectorAll('a[href]').forEach((link) => {
+    try {
+      const linkPath = new URL(link.href).pathname.replace(/\/index(?:\.html)?$/, '/') || '/';
+      if (linkPath === currentPath) link.setAttribute('aria-current', 'page');
+    } catch {
+      // Ignore malformed links; the browser will retain its normal behavior.
+    }
+  });
 
   // hamburger for mobile
   const hamburger = document.createElement('div');

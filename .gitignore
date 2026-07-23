@@ -3,6 +3,18 @@ coverage/*
 logs/*
 node_modules/*
 
+# DA CLI workspace, generated media, pipeline runs, and local evidence.
+.da/
+
+# Generated content media is DA-owned. Keep exact reviewed outputs out of Git;
+# upload them through da-cli after the Riverboat trust boundary closes.
+*.mp4
+*.webm
+*.webp
+*.jpg
+*.jpeg
+*.png
+
 helix-importer-ui
 .DS_Store
 *.bak

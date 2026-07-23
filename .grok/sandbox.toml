@@ -1,0 +1,15 @@
+[profiles.da-oak-media]
+extends = "strict"
+restrict_network = true
+read_only = ["/Users/mhess/aem/aem-code/da/da-oak"]
+read_write = ["/Users/mhess/aem/aem-code/da/da-oak/.da/media-staging"]
+deny = [
+  "/Users/mhess/aem/aem-code/da/da-oak/.git",
+  "/Users/mhess/aem/aem-code/da/da-oak/.da.json",
+  "/Users/mhess/.aem",
+  "/Users/mhess/.ssh",
+  "/Users/mhess/.config/gh",
+  "**/.env",
+  "**/*.pem",
+  "**/*.key",
+]
