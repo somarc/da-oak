@@ -8,9 +8,10 @@ dogfood cohort**. The source-tree candidate correctly reported package version
 the work to the release cycle without pretending that a 0.6.0 package had
 already been published.
 
-After review, the passing `canon` code change was approved for merge to `main`
-through [PR #2](https://github.com/somarc/da-oak/pull/2). This closes the code
-integration gap only. DA-authored content was **not** published to
+After review, the passing `canon` code change merged to `main` through
+[PR #2](https://github.com/somarc/da-oak/pull/2) at
+[`60c8659`](https://github.com/somarc/da-oak/commit/60c865911a3fc16af2ddf1dfdd78bbc6ad9cb50c).
+This closes the code integration gap only. DA-authored content was **not** published to
 `*.aem.live`, so the original no-live-publish boundary and poster-only
 Riverboat result remain unchanged.
 
