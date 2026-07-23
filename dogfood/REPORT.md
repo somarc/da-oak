@@ -1,5 +1,30 @@
 # DA × Oak — DA CLI pre-0.6.0 dogfood report
 
+## Release-cycle closure — 2026-07-23
+
+This point-in-time run is now explicitly attributed to the DA CLI **0.6.0
+dogfood cohort**. The source-tree candidate correctly reported package version
+`0.5.1` during the run; the retained CLI SHA and the 0.6.0 rubric evidence bind
+the work to the release cycle without pretending that a 0.6.0 package had
+already been published.
+
+After review, the passing `canon` code change was approved for merge to `main`
+through [PR #2](https://github.com/somarc/da-oak/pull/2). This closes the code
+integration gap only. DA-authored content was **not** published to
+`*.aem.live`, so the original no-live-publish boundary and poster-only
+Riverboat result remain unchanged.
+
+The findings fed the 0.6.0 work directly: F-005 was resolved by
+[da-cli PR #73](https://github.com/somarc/da-cli/pull/73), F-004 by
+[PR #74](https://github.com/somarc/da-cli/pull/74), F-006 by
+[PR #75](https://github.com/somarc/da-cli/pull/75), and F-007 by
+[PR #76](https://github.com/somarc/da-cli/pull/76). F-001 and F-002 remain
+bounded, non-gating investigations in
+[issues #61](https://github.com/somarc/da-cli/issues/61) and
+[#62](https://github.com/somarc/da-cli/issues/62).
+
+The original report follows unchanged as historical run evidence.
+
 **Date:** 2026-07-22
 **Repository:** `somarc/da-oak`
 **Feature branch:** `canon`

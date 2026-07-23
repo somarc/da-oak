@@ -10,9 +10,21 @@ The central invariant is deliberately simple:
 
 ## Environments
 
-- Feature preview: https://canon--da-oak--somarc.aem.page/
 - Main preview: https://main--da-oak--somarc.aem.page/
-- Main live: https://main--da-oak--somarc.aem.live/
+- Main live: https://main--da-oak--somarc.aem.live/ (authored canon not published)
+- Historical dogfood preview: https://canon--da-oak--somarc.aem.page/
+
+## DA CLI 0.6.0 release attribution
+
+This site is part of the `@somarc/da-cli` **0.6.0 dogfood cohort**. The run
+started against a source-tree candidate that still reported package version
+`0.5.1`; immutable CLI SHAs, findings, fixes, and validation evidence bind it to
+the 0.6.0 release cycle rather than to the published 0.5.1 package.
+
+The original run is retained in [`dogfood/REPORT.md`](./dogfood/REPORT.md). Its
+poster-only Riverboat result and no-live-publish boundary remain part of the
+record. Merging the reviewed EDS code to `main` does not publish DA-authored
+content to `*.aem.live`.
 
 ## Source ownership
 
@@ -24,7 +36,7 @@ Riverboat inputs, and dogfood evidence. Generated media remains under ignored
 Project targeting is pinned in `.da.json`:
 
 ```json
-{ "org": "somarc", "repo": "da-oak", "branch": "canon" }
+{ "org": "somarc", "repo": "da-oak", "branch": "main" }
 ```
 
 ## DA CLI dogfood loop
@@ -54,7 +66,7 @@ Publishing to `*.aem.live` remains a separate explicit approval boundary.
 arbitrary shell through the hidden `--riverboat-gambler` mode. Root `--commit`
 does not gate that side effect. Review and dry-run it before any execution.
 
-The recorded `canon` run generated and accepted one 2400×1350 WebP poster.
+The recorded dogfood run generated and accepted one 2400×1350 WebP poster.
 The optional `image_to_video` attempt was correctly contained but unavailable:
 the provider's Zero Data Retention policy required an `output.upload_url` not
 present in the sandbox. No replacement provider or synthetic fallback was used.
